@@ -6,6 +6,7 @@ import cors from 'cors';
 
 //import routes
 import userRoutes from './routes/userRoutes.js'
+import categoryRoutes from './routes/categoryRoutes.js'
 
 
 //connect DB
@@ -25,6 +26,7 @@ app.use(cors())
 
 //Routes
 app.use('/api/users', userRoutes);
+app.use('/api/category',categoryRoutes)
 
 //default route
 app.get('/', (req, res) => {
